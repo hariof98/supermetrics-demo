@@ -1,1 +1,21 @@
+#!/usr/bin/env sh
+
+# Load nvm when git launches hooks outside your interactive shell.
+export NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
+
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+  . "$NVM_DIR/nvm.sh"
+  nvm use --silent 22 >/dev/null 2>&1 || nvm use --silent >/dev/null 2>&1
+fi
+
+# Ensure the hook fails fast and shows a clear version mismatch.
+required_major=22
+node_major="$(node -p 'process.versions.node.split(".")[0]')"
+
+if [ "$node_major" -lt "$required_major" ]; then
+  echo "Pre-commit requires Node >=22. Current Node: $(node -v)"
+  echo "ESLint 10 config uses runtime APIs such as structuredClone that are unavailable on older Node versions."
+  exit 1
+fi
+
 npx lint-staged

@@ -1,17 +1,13 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Text from "../components/atoms/Text/Text.astro";
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Astro</title>
-    </head>
-    <body>
-        <h1>Astro</h1>
-    </body>
-</html>
+<BaseLayout title="Home">
+    <main class="mx-auto max-w-content p-gutter">
+        <Text as="h1" variant="heading">Astro</Text>
+        <Text variant="subheading" class="mt-4">Tailwind 4 theme tokens are active. Headings should render in Sora.</Text>
+        <Text variant="body" class="mt-4">Tailwind 4 theme tokens are active. Headings should render in Sora.</Text>
+        <Text variant="caption" class="mt-4">Tailwind 4 theme tokens are active. Headings should render in Sora.</Text>
+    </main>
+</BaseLayout>

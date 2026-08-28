@@ -17,7 +17,11 @@
         "prepare": "husky"
     },
     "dependencies": {
-        "astro": "^7.2.9"
+        "@fontsource/inter": "^5.3.0",
+        "@fontsource/sora": "^5.3.0",
+        "@tailwindcss/vite": "^4.3.3",
+        "astro": "^7.2.9",
+        "tailwindcss": "^4.3.3"
     },
     "allowScripts": {
         "esbuild": true

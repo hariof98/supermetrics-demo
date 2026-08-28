@@ -1,0 +1,16 @@
+---
+type Variant = "display" | "heading" | "subheading" | "body" | "caption";
+type Tag = "h1" | "h2" | "h3" | "h4" | "p" | "span";
+
+interface Props {
+    as?: Tag;
+    variant?: Variant;
+    class?: string;
+}
+
+const { as: Element = "p", variant = "body", class: className } = Astro.props;
+---
+
+<Element class:list={[`text-${variant}`, "text-balance", className]}>
+    <slot />
+</Element>
