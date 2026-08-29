@@ -59,6 +59,37 @@
                         "href": "/demo"
                     }
                 ]
+            },
+            {
+                "type": "action",
+                "heading": "Turn marketing data into revenue — fast",
+                "description": "Deploy pre-built connectors, automated transformations, and real-time dashboards so your team spends less time wrangling data and more time scaling campaigns.",
+                "ctas": [
+                    {
+                        "text": "Try 2‑Minute Setup",
+                        "href": "/getting-started",
+                        "variant": "fill",
+                        "tone": "green"
+                    },
+                    {
+                        "text": "Explore Integrations",
+                        "href": "/integrations",
+                        "variant": "outline",
+                        "tone": "purple"
+                    },
+                    {
+                        "text": "Contact Sales",
+                        "href": "/contact",
+                        "variant": "text",
+                        "tone": "green"
+                    }
+                ]
+            },
+            {
+                "type": "testimonial",
+                "heading": "Turn marketing data into revenue — fast",
+                "description": "Deploy pre-built connectors, automated transformations, and real-time dashboards so your team spends less time wrangling data and more time scaling campaigns.",
+                "caption": "Hari, Chargebee"
             }
         ]
     }

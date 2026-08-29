@@ -1,0 +1,115 @@
+---
+import Container from "../../atoms/Container/Container.astro";
+import Text from "../../atoms/Text/Text.astro";
+import Link from "../../atoms/Link/Link.astro";
+import type { Props as LinkProps } from "../../atoms/Link/Link.astro";
+
+type Links = Pick<LinkProps, "href" | "external" | "label"> & {
+    text: string;
+};
+
+interface Props {
+    heading: string;
+    description: string;
+    caption: string;
+    links?: Links[];
+}
+
+const { heading, description, caption, links = [] } = Astro.props as Props;
+---
+
+<section class="testimonial">
+    <Container>
+        <div class="testimonial-inner">
+            <div class="testimonial-content">
+                <Text as="h2" variant="heading" class="testimonial-heading">{heading}</Text>
+
+                <Text variant="subheading" class="testimonial-description">
+                    {description}
+                </Text>
+
+                {
+                    links.length > 0 && (
+                        <div class="testimonial-links" aria-label="testimonial links">
+                            {links.map(({ text, ...linkProps }) => (
+                                <Link {...linkProps} class="testimonial-link">
+                                    {text}
+                                </Link>
+                            ))}
+                        </div>
+                    )
+                }
+            </div>
+
+            <Text variant="caption" class="testimonial-caption">
+                {caption}
+            </Text>
+        </div>
+    </Container>
+</section>
+
+<style>
+    .testimonial {
+        padding-block: var(--spacing-section);
+    }
+
+    .testimonial-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: clamp(2rem, 4vw, 4rem);
+        border: 1px solid color-mix(in srgb, var(--color-caption) 24%, var(--color-surface));
+        border-radius: 1.5rem;
+        background: linear-gradient(180deg, color-mix(in srgb, var(--color-subheading) 6%, white), var(--color-surface));
+        box-shadow:
+            0 1.5rem 3rem color-mix(in srgb, var(--color-heading) 8%, transparent),
+            0 0 0 1px color-mix(in srgb, var(--color-surface) 60%, transparent) inset;
+        text-align: center;
+    }
+
+    .testimonial-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    .testimonial-heading {
+        max-width: 16ch;
+    }
+
+    .testimonial-description {
+        max-width: 40rem;
+    }
+
+    .testimonial-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.875rem;
+        margin-top: 0.5rem;
+    }
+
+    .testimonial-link {
+        display: inline-flex;
+        width: fit-content;
+        font-weight: 500;
+    }
+
+    .testimonial-caption {
+        color: var(--color-caption);
+    }
+
+    @media (min-width: 48rem) {
+        .testimonial-inner {
+            gap: 1.75rem;
+        }
+
+        .testimonial-links {
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+    }
+</style>

@@ -1,0 +1,55 @@
+---
+import Container from "../components/atoms/Container/Container.astro";
+import Link from "../components/atoms/Link/Link.astro";
+---
+
+<header class="site-header">
+    <Container as="header" class="site-header-inner">
+        <Link href="/" class="site-header-brand">Demo Marketing Website</Link>
+
+        <nav aria-label="Primary navigation" class="site-header-nav">
+            <Link href="/">Home</Link>
+            <Link href="/product">Product</Link>
+            <Link href="/pricing">Pricing</Link>
+        </nav>
+    </Container>
+</header>
+
+<style>
+    .site-header {
+        border-bottom: 1px solid color-mix(in srgb, var(--color-caption) 20%, var(--color-surface));
+        background-color: var(--color-surface);
+    }
+
+    .site-header-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-block: 1.5rem;
+    }
+
+    .site-header-brand {
+        width: fit-content;
+        font-family: var(--font-sora);
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .site-header-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .site-header-nav :global(a) {
+        text-decoration: none;
+    }
+
+    @media (min-width: 48rem) {
+        .site-header-inner {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+</style>

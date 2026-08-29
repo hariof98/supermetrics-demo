@@ -14,7 +14,9 @@ const { title, description, blocks } = page.data;
 <BaseLayout title={title} description={description}>
     {
         blocks.map((block) => {
-            const Block = blockRegistry[block.type];
+            /* the discriminated union guarantees props match the component,
+            but TypeScript can't prove it through a registry lookup. */
+            const Block = blockRegistry[block.type] as (props: typeof block) => unknown;
 
             return Block ? <Block {...block} /> : null;
         })
