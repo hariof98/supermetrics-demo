@@ -1,0 +1,140 @@
+---
+import Container from "../../atoms/Container/Container.astro";
+import Text from "../../atoms/Text/Text.astro";
+import Button from "../../atoms/Button/Button.astro";
+import type { Props as ButtonProps } from "../../atoms/Button/Button.astro";
+import Image from "../../atoms/Image/Image.astro";
+import type { Props as ImageProps } from "../../atoms/Image/Image.astro";
+
+type Layout = "split" | "centered";
+
+type Cta = Pick<ButtonProps, "href" | "variant" | "tone" | "external" | "label"> & {
+    text: string;
+};
+
+type HeroImage = Pick<ImageProps, "src" | "alt">;
+
+interface Props {
+    layout?: Layout;
+    heading: string;
+    description?: string;
+    ctas?: Cta[];
+    image?: HeroImage;
+}
+
+const { layout = "centered", heading, description, ctas = [], image } = Astro.props as Props;
+
+// A split layout with no image has nothing to split. Fall back rather than
+// rendering an empty column.
+const resolvedLayout = layout === "split" && !image ? "centered" : layout;
+---
+
+<section class="hero">
+    <Container>
+        <div class:list={["hero-inner", `hero-${resolvedLayout}`]}>
+            <div class="hero-content">
+                <Text as="h1" variant="display">{heading}</Text>
+
+                {
+                    description && (
+                        <Text variant="subheading" class="hero-description">
+                            {description}
+                        </Text>
+                    )
+                }
+
+                {
+                    ctas.length > 0 && (
+                        <div class="hero-ctas">
+                            {ctas.map(({ text, ...buttonProps }) => (
+                                <Button {...buttonProps}>{text}</Button>
+                            ))}
+                        </div>
+                    )
+                }
+            </div>
+
+            {
+                image && (
+                    <div class="hero-media">
+                        <Image {...image} loading="eager" />
+                    </div>
+                )
+            }
+        </div>
+    </Container>
+</section>
+
+<style>
+    .hero {
+        padding-block: var(--spacing-section);
+    }
+
+    .hero-inner {
+        display: grid;
+        gap: clamp(2rem, 4vw, 4rem);
+        align-items: center;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .hero-description {
+        max-width: 38rem;
+    }
+
+    .hero-ctas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .hero-media {
+        overflow: hidden;
+        border-radius: 1rem;
+        border: 1px solid color-mix(in srgb, var(--color-caption) 30%, var(--color-surface));
+        background-color: var(--color-surface);
+        box-shadow: 0 1.5rem 3rem color-mix(in srgb, var(--color-heading) 10%, transparent);
+    }
+
+    .hero-media :global(img) {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-centered {
+        justify-items: center;
+        text-align: center;
+    }
+
+    .hero-centered .hero-content {
+        align-items: center;
+        max-width: 44rem;
+    }
+
+    .hero-centered .hero-description {
+        margin-inline: auto;
+    }
+
+    .hero-centered .hero-ctas {
+        justify-content: center;
+    }
+
+    .hero-centered .hero-media {
+        max-width: 56rem;
+    }
+
+    @media (min-width: 48rem) {
+        .hero-split {
+            grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+        }
+
+        .hero-split .hero-content {
+            max-width: 36rem;
+        }
+    }
+</style>

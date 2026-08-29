@@ -1,0 +1,33 @@
+[
+    {
+        "id": "homepage",
+        "title": "Marketing Intelligence Platform",
+        "description": "Bring every marketing channel into one reliable reporting layer so teams can optimize performance with confidence.",
+        "blocks": [
+            {
+                "type": "hero",
+                "layout": "split",
+                "heading": "Make Smarter Marketing Decisions with Unified Data",
+                "description": "Connect your paid, organic, and CRM data in one place to uncover insights faster, improve campaign performance, and prove impact across the funnel.",
+                "image": {
+                    "src": "../assets/hero.jpg",
+                    "alt": "Dashboard showing campaign performance across channels"
+                },
+                "ctas": [
+                    {
+                        "text": "Start Free Trial",
+                        "href": "/signup",
+                        "variant": "fill",
+                        "tone": "purple"
+                    },
+                    {
+                        "text": "Book a Demo",
+                        "href": "/demo",
+                        "variant": "outline",
+                        "tone": "green"
+                    }
+                ]
+            }
+        ]
+    }
+]

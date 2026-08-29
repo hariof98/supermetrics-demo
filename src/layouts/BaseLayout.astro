@@ -1,9 +1,13 @@
 ---
 import "../styles/global.css";
+
 interface Props {
     title?: string;
+    description?: string;
 }
-const { title = "Astro" } = Astro.props as Props;
+
+const { title = "Astro", description = "A fast, content-driven website built with Astro." } = Astro.props as Props;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
 ---
 
 <html lang="en">
@@ -11,6 +15,19 @@ const { title = "Astro" } = Astro.props as Props;
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href={canonicalUrl} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={canonicalUrl} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" href="/favicon.ico" />
     </head>

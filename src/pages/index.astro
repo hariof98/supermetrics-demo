@@ -1,24 +1,24 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Text from "../components/atoms/Text/Text.astro";
-import Button from "../components/atoms/Button/Button.astro";
-import Link from "../components/atoms/Link/Link.astro";
-import Container from "../components/atoms/Container/Container.astro";
-import Image from "../components/atoms/Image/Image.astro";
-import heroImage from "../assets/hero.jpg";
+import { blockRegistry } from "../components/blocks/registry";
+
+const pages = await getCollection("pages");
+const page = pages.find((p) => p.id === "homepage");
+
+if (!page) throw new Error("homepage entry not found in pages collection");
+
+const { title, description, blocks } = page.data;
 ---
 
-<BaseLayout title="Home">
-    <Container as="main" class="mx-auto max-w-content p-gutter">
-        <Text as="h1" variant="heading">Astro</Text>
-        <Text variant="subheading" class="mt-4">Tailwind 4 theme tokens are active. Headings should render in Sora.</Text>
-        <Text variant="body" class="mt-4">Tailwind 4 theme tokens are active. Headings should render in Sora.</Text>
-        <Text variant="caption" class="mt-10">Tailwind 4 theme tokens are active. Headings should render in Sora.</Text>
+<BaseLayout title={title} description={description}>
+    {
+        blocks.map((block) => {
+            if (block.type === "hero") {
+                const Block = blockRegistry[block.type];
 
-        <Button href="https://supermetrics.com/" variant="fill" label="btn" tone="purple"> Tailwind Buttons </Button>
-
-        <Link href="https://supermetrics.com/" external={true}> Test</Link>
-
-        <Image src={heroImage} alt="hero-mockup" />
-    </Container>
+                return Block ? <Block {...block} /> : null;
+            }
+        })
+    }
 </BaseLayout>

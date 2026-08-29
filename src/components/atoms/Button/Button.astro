@@ -1,8 +1,8 @@
 ---
-type Variant = "fill" | "outline" | "text";
-type Tone = "default" | "green" | "purple";
+export type Variant = "fill" | "outline" | "text";
+export type Tone = "default" | "green" | "purple";
 
-interface Props {
+export interface Props {
     href?: string;
     variant?: Variant;
     tone?: Tone;
@@ -17,7 +17,7 @@ const { href = "/", variant = "fill", tone = "default", external = false, label,
 <a
     href={href}
     aria-label={label}
-    class:list={["btn", `btn-${variant} btn-${tone}`, className]}
+    class:list={["btn", `btn-${variant}`, tone !== "default" && `btn-${tone}`, className]}
     {...external && { target: "_blank", rel: "noopener noreferrer" }}>
     <slot />
     {external && <span class="sr-only">(opens in a new tab)</span>}
