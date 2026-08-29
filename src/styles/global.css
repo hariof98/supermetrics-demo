@@ -133,14 +133,14 @@
     }
 
     .link {
-        color: var(--color-subheading);
+        color: var(--color-heading);
         text-decoration: underline;
         text-decoration-color: currentColor;
         text-underline-offset: 0.14em;
     }
 
     .link:focus-visible {
-        outline: 2px solid var(--color-subheading);
+        outline: 2px solid var(--color-heading);
         outline-offset: 3px;
     }
 

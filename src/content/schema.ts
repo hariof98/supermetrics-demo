@@ -11,6 +11,12 @@ export const createPageSchema = ({ image }: Pick<SchemaContext, "image">) => {
         label: z.string().min(1).optional(),
     });
 
+    const link = z.object({
+        text: z.string().min(1),
+        href: z.string().min(1),
+        external: z.boolean().optional(),
+    });
+
     const imageSchema = z.object({
         src: image(),
         alt: z.string(),
@@ -28,7 +34,16 @@ export const createPageSchema = ({ image }: Pick<SchemaContext, "image">) => {
         ctas: z.array(cta).optional(),
     });
 
-    const blockSchema = z.discriminatedUnion("type", [hero]);
+    const feature = z.object({
+        type: z.literal("feature"),
+        imagePosition: z.enum(["left", "right"]).default("left"),
+        heading: z.string().min(1),
+        description: z.string().optional(),
+        image: imageSchema.optional(),
+        links: z.array(link).optional(),
+    });
+
+    const blockSchema = z.discriminatedUnion("type", [hero, feature]);
 
     return z.object({
         title: z.string().min(1), // title & description are page metadata for SEO

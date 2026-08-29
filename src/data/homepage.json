@@ -6,13 +6,9 @@
         "blocks": [
             {
                 "type": "hero",
-                "layout": "split",
+                "layout": "centered",
                 "heading": "Make Smarter Marketing Decisions with Unified Data",
                 "description": "Connect your paid, organic, and CRM data in one place to uncover insights faster, improve campaign performance, and prove impact across the funnel.",
-                "image": {
-                    "src": "../assets/hero.jpg",
-                    "alt": "Dashboard showing campaign performance across channels"
-                },
                 "ctas": [
                     {
                         "text": "Start Free Trial",
@@ -25,6 +21,42 @@
                         "href": "/demo",
                         "variant": "outline",
                         "tone": "green"
+                    }
+                ]
+            },
+            {
+                "type": "feature",
+                "imagePosition": "left",
+                "heading": "Make Smarter Marketing Decisions with Unified Data",
+                "description": "Connect your paid, organic, and CRM data in one place to uncover insights faster, improve campaign performance, and prove impact across the funnel.",
+                "image": {
+                    "src": "../assets/hero.jpg",
+                    "alt": "Dashboard showing campaign performance across channels"
+                },
+                "links": [
+                    {
+                        "text": "Start Free Trial",
+                        "href": "/signup"
+                    }
+                ]
+            },
+            {
+                "type": "feature",
+                "imagePosition": "right",
+                "heading": "Make Smarter Marketing Decisions with Unified Data",
+                "description": "Connect your paid, organic, and CRM data in one place to uncover insights faster, improve campaign performance, and prove impact across the funnel.",
+                "image": {
+                    "src": "../assets/hero.jpg",
+                    "alt": "Dashboard showing campaign performance across channels"
+                },
+                "links": [
+                    {
+                        "text": "Start Free Trial",
+                        "href": "/signup"
+                    },
+                    {
+                        "text": "Get a demo",
+                        "href": "/demo"
                     }
                 ]
             }

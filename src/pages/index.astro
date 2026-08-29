@@ -14,11 +14,9 @@ const { title, description, blocks } = page.data;
 <BaseLayout title={title} description={description}>
     {
         blocks.map((block) => {
-            if (block.type === "hero") {
-                const Block = blockRegistry[block.type];
+            const Block = blockRegistry[block.type];
 
-                return Block ? <Block {...block} /> : null;
-            }
+            return Block ? <Block {...block} /> : null;
         })
     }
 </BaseLayout>
