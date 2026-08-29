@@ -10,6 +10,7 @@
         "build": "astro check && astro build",
         "preview": "astro preview",
         "astro": "astro",
+        "new:block": "node scripts/new-block.ts",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "format": "prettier --write .",
