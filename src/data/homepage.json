@@ -1,96 +1,93 @@
-[
-    {
-        "id": "homepage",
-        "title": "Marketing Intelligence Platform",
-        "description": "Bring every marketing channel into one reliable reporting layer so teams can optimize performance with confidence.",
-        "blocks": [
-            {
-                "type": "hero",
-                "layout": "centered",
-                "heading": "Make Smarter Marketing Decisions with Unified Data",
-                "description": "Connect your paid, organic, and CRM data in one place to uncover insights faster, improve campaign performance, and prove impact across the funnel.",
-                "ctas": [
-                    {
-                        "text": "Start Free Trial",
-                        "href": "/signup",
-                        "variant": "fill",
-                        "tone": "purple"
-                    },
-                    {
-                        "text": "Book a Demo",
-                        "href": "/demo",
-                        "variant": "outline",
-                        "tone": "green"
-                    }
-                ]
-            },
-            {
-                "type": "feature",
-                "imagePosition": "left",
-                "heading": "Make Smarter Marketing Decisions with Unified Data",
-                "description": "Connect your paid, organic, and CRM data in one place to uncover insights faster, improve campaign performance, and prove impact across the funnel.",
-                "image": {
-                    "src": "../assets/hero.jpg",
-                    "alt": "Dashboard showing campaign performance across channels"
+{
+    "title": "Marketing Intelligence Platform",
+    "description": "Bring every marketing channel into one reliable reporting layer so teams can optimize performance with confidence.",
+    "blocks": [
+        {
+            "type": "hero",
+            "layout": "centered",
+            "heading": "Make Smarter Marketing Decisions with Unified Data",
+            "description": "Connect your paid, organic, and CRM data in one place to uncover insights faster, improve campaign performance, and prove impact across the funnel.",
+            "ctas": [
+                {
+                    "text": "Start Free Trial",
+                    "href": "/signup",
+                    "variant": "fill",
+                    "tone": "purple"
                 },
-                "links": [
-                    {
-                        "text": "Start Free Trial",
-                        "href": "/signup"
-                    }
-                ]
+                {
+                    "text": "Book a Demo",
+                    "href": "/demo",
+                    "variant": "outline",
+                    "tone": "green"
+                }
+            ]
+        },
+        {
+            "type": "feature",
+            "imagePosition": "left",
+            "heading": "Make Smarter Marketing Decisions with Unified Data",
+            "description": "Connect your paid, organic, and CRM data in one place to uncover insights faster, improve campaign performance, and prove impact across the funnel.",
+            "image": {
+                "src": "../assets/hero.jpg",
+                "alt": "Dashboard showing campaign performance across channels"
             },
-            {
-                "type": "feature",
-                "imagePosition": "right",
-                "heading": "Make Smarter Marketing Decisions with Unified Data",
-                "description": "Connect your paid, organic, and CRM data in one place to uncover insights faster, improve campaign performance, and prove impact across the funnel.",
-                "image": {
-                    "src": "../assets/hero.jpg",
-                    "alt": "Dashboard showing campaign performance across channels"
+            "links": [
+                {
+                    "text": "Start Free Trial",
+                    "href": "/signup"
+                }
+            ]
+        },
+        {
+            "type": "feature",
+            "imagePosition": "right",
+            "heading": "Make Smarter Marketing Decisions with Unified Data",
+            "description": "Connect your paid, organic, and CRM data in one place to uncover insights faster, improve campaign performance, and prove impact across the funnel.",
+            "image": {
+                "src": "../assets/hero.jpg",
+                "alt": "Dashboard showing campaign performance across channels"
+            },
+            "links": [
+                {
+                    "text": "Start Free Trial",
+                    "href": "/signup"
                 },
-                "links": [
-                    {
-                        "text": "Start Free Trial",
-                        "href": "/signup"
-                    },
-                    {
-                        "text": "Get a demo",
-                        "href": "/demo"
-                    }
-                ]
-            },
-            {
-                "type": "action",
-                "heading": "Turn marketing data into revenue — fast",
-                "description": "Deploy pre-built connectors, automated transformations, and real-time dashboards so your team spends less time wrangling data and more time scaling campaigns.",
-                "ctas": [
-                    {
-                        "text": "Try 2‑Minute Setup",
-                        "href": "/getting-started",
-                        "variant": "fill",
-                        "tone": "green"
-                    },
-                    {
-                        "text": "Explore Integrations",
-                        "href": "/integrations",
-                        "variant": "outline",
-                        "tone": "purple"
-                    },
-                    {
-                        "text": "Contact Sales",
-                        "href": "/contact",
-                        "variant": "text",
-                        "tone": "green"
-                    }
-                ]
-            },
-            {
-                "type": "testimonial",
-                "heading": "Turn marketing data into revenue — fast",
-                "description": "Deploy pre-built connectors, automated transformations, and real-time dashboards so your team spends less time wrangling data and more time scaling campaigns.",
-                "caption": "Hari, Chargebee"
-            }
-        ]
-    }
-]
+                {
+                    "text": "Get a demo",
+                    "href": "/demo"
+                }
+            ]
+        },
+        {
+            "type": "action",
+            "heading": "Turn marketing data into revenue — fast",
+            "description": "Deploy pre-built connectors, automated transformations, and real-time dashboards so your team spends less time wrangling data and more time scaling campaigns.",
+            "ctas": [
+                {
+                    "text": "Try 2‑Minute Setup",
+                    "href": "/getting-started",
+                    "variant": "fill",
+                    "tone": "green"
+                },
+                {
+                    "text": "Explore Integrations",
+                    "href": "/integrations",
+                    "variant": "outline",
+                    "tone": "purple"
+                },
+                {
+                    "text": "Contact Sales",
+                    "href": "/contact",
+                    "variant": "text",
+                    "tone": "green"
+                }
+            ]
+        },
+        {
+            "type": "testimonial",
+            "heading": "Turn marketing data into revenue — fast",
+            "description": "Deploy pre-built connectors, automated transformations, and real-time dashboards so your team spends less time wrangling data and more time scaling campaigns.",
+            "caption": "Hari, Chargebee"
+        }
+    ]
+}

@@ -1,10 +1,10 @@
 import { defineCollection } from "astro:content";
-import { file } from "astro/loaders";
+import { glob } from "astro/loaders";
 import { createPageSchema } from "./content/schema";
 
 const pages = defineCollection({
-    loader: file("src/data/homepage.json"),
-    schema: ({ image }) => createPageSchema({ image }),
+    loader: glob({ pattern: "*.json", base: "./src/data" }), // for loading all JSON entries under data
+    schema: createPageSchema,
 });
 
 export const collections = { pages };
