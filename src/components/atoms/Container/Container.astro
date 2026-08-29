@@ -1,0 +1,14 @@
+---
+type As = "div" | "section" | "header" | "footer" | "main";
+
+interface Props {
+    as?: As;
+    class?: string;
+}
+
+const { as: Element = "div", class: className } = Astro.props;
+---
+
+<Element class:list={["container", className]}>
+    <slot />
+</Element>

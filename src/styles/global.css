@@ -15,9 +15,12 @@
 
     /* Colors -> enables utilities like text-fg, text-muted, bg-surface */
     --color-body: #282828;
-    --color-subheading: #0084a2;
+    --color-subheading: #00758f;
     --color-heading: #000000;
-    --color-caption: #889ab4;
+    --color-caption: #5a6b85;
+    --color-accent-green: #1f6f43;
+    --color-accent-purple: #6f42c1;
+    --color-surface: #ffffff;
 
     /* Layout spacing (named, so Tailwind's numeric scale stays intact) */
     --spacing-section: 5rem;
@@ -29,13 +32,18 @@
 
 /* Component-level typography variants */
 @layer components {
+    .container {
+        width: min(100% - (var(--spacing-gutter) * 2), var(--container-content));
+        margin-inline: auto;
+    }
+
     .text-display {
         font-family: var(--font-sora);
         font-weight: 600;
         font-size: clamp(2.5rem, 1.5rem + 2vw, 3.5rem);
         line-height: 1.1;
         letter-spacing: -0.02em;
-        color: var(--color-body);
+        color: var(--color-heading);
     }
 
     .text-heading {
@@ -72,5 +80,71 @@
         line-height: 1.4;
         letter-spacing: 0.04em;
         color: var(--color-caption);
+    }
+
+    .btn {
+        --btn-accent: var(--color-subheading);
+        --btn-contrast: var(--color-surface);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.25rem;
+        border-radius: 0.5rem;
+        border: 1px solid transparent;
+        font-family: var(--font-sans);
+        font-weight: 500;
+        line-height: 1.2;
+        text-decoration: none;
+        cursor: pointer;
+        transition:
+            background-color 150ms ease,
+            border-color 150ms ease;
+    }
+
+    .btn:focus-visible {
+        outline: 2px solid var(--btn-accent);
+        outline-offset: 3px;
+    }
+
+    .btn-fill {
+        background-color: var(--btn-accent);
+        color: var(--btn-contrast);
+    }
+
+    .btn-outline {
+        background-color: transparent;
+        border-color: var(--btn-accent);
+        color: var(--btn-accent);
+    }
+
+    .btn-text {
+        padding-inline: 0;
+        background-color: transparent;
+        color: var(--btn-accent);
+    }
+
+    .btn-green {
+        --btn-accent: var(--color-accent-green);
+    }
+
+    .btn-purple {
+        --btn-accent: var(--color-accent-purple);
+    }
+
+    .link {
+        color: var(--color-subheading);
+        text-decoration: underline;
+        text-decoration-color: currentColor;
+        text-underline-offset: 0.14em;
+    }
+
+    .link:focus-visible {
+        outline: 2px solid var(--color-subheading);
+        outline-offset: 3px;
+    }
+
+    .link:hover {
+        text-decoration-thickness: 2px;
     }
 }

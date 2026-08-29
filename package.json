@@ -7,7 +7,7 @@
     },
     "scripts": {
         "dev": "astro dev",
-        "build": "astro build",
+        "build": "astro check && astro build",
         "preview": "astro preview",
         "astro": "astro",
         "lint": "eslint .",
@@ -27,6 +27,7 @@
         "esbuild": true
     },
     "devDependencies": {
+        "@astrojs/check": "^0.9.10",
         "@eslint/js": "^10.0.1",
         "eslint": "^10.9.1",
         "eslint-config-prettier": "^10.1.8",
@@ -34,6 +35,7 @@
         "husky": "^9.1.7",
         "lint-staged": "^16.4.0",
         "prettier-plugin-astro": "^0.14.1",
+        "typescript": "^6.0.3",
         "typescript-eslint": "^8.68.0"
     },
     "lint-staged": {

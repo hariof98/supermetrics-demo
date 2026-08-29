@@ -1,13 +1,24 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Text from "../components/atoms/Text/Text.astro";
+import Button from "../components/atoms/Button/Button.astro";
+import Link from "../components/atoms/Link/Link.astro";
+import Container from "../components/atoms/Container/Container.astro";
+import Image from "../components/atoms/Image/Image.astro";
+import heroImage from "../assets/hero.jpg";
 ---
 
 <BaseLayout title="Home">
-    <main class="mx-auto max-w-content p-gutter">
+    <Container as="main" class="mx-auto max-w-content p-gutter">
         <Text as="h1" variant="heading">Astro</Text>
         <Text variant="subheading" class="mt-4">Tailwind 4 theme tokens are active. Headings should render in Sora.</Text>
         <Text variant="body" class="mt-4">Tailwind 4 theme tokens are active. Headings should render in Sora.</Text>
-        <Text variant="caption" class="mt-4">Tailwind 4 theme tokens are active. Headings should render in Sora.</Text>
-    </main>
+        <Text variant="caption" class="mt-10">Tailwind 4 theme tokens are active. Headings should render in Sora.</Text>
+
+        <Button href="https://supermetrics.com/" variant="fill" label="btn" tone="purple"> Tailwind Buttons </Button>
+
+        <Link href="https://supermetrics.com/" external={true}> Test</Link>
+
+        <Image src={heroImage} alt="hero-mockup" />
+    </Container>
 </BaseLayout>

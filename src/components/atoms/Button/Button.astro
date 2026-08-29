@@ -1,0 +1,24 @@
+---
+type Variant = "fill" | "outline" | "text";
+type Tone = "default" | "green" | "purple";
+
+interface Props {
+    href?: string;
+    variant?: Variant;
+    tone?: Tone;
+    external?: boolean;
+    label?: string;
+    class?: string;
+}
+
+const { href = "/", variant = "fill", tone = "default", external = false, label, class: className } = Astro.props;
+---
+
+<a
+    href={href}
+    aria-label={label}
+    class:list={["btn", `btn-${variant} btn-${tone}`, className]}
+    {...external && { target: "_blank", rel: "noopener noreferrer" }}>
+    <slot />
+    {external && <span class="sr-only">(opens in a new tab)</span>}
+</a>

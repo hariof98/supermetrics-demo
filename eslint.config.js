@@ -9,6 +9,12 @@ export default [
     ...astro.configs.recommended,
     prettier,
     {
+        files: ["**/*.astro"],
+        rules: {
+            "@typescript-eslint/no-unused-vars": "off",
+        },
+    },
+    {
         ignores: ["dist/", ".astro/", "node_modules/"],
     },
 ];
