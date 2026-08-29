@@ -1,0 +1,93 @@
+{
+    "title": "Pricing",
+    "description": "Explore transparent pricing for growing marketing teams, with plans from $29 to custom enterprise packages.",
+    "blocks": [
+        {
+            "type": "hero",
+            "layout": "centered",
+            "heading": "Pricing plans from $29/month to enterprise scale",
+            "description": "Start with Starter at $29/month, move to Growth at $99/month for broader collaboration, or choose Enterprise pricing for advanced governance, support, and data volume needs.",
+            "ctas": [
+                {
+                    "text": "Start Free Trial",
+                    "href": "/signup",
+                    "variant": "fill",
+                    "tone": "purple"
+                },
+                {
+                    "text": "View Plans",
+                    "href": "/pricing#plans",
+                    "variant": "outline",
+                    "tone": "green"
+                },
+                {
+                    "text": "Talk to Sales",
+                    "href": "/contact",
+                    "variant": "text",
+                    "tone": "green"
+                }
+            ]
+        },
+        {
+            "type": "feature",
+            "imagePosition": "left",
+            "heading": "Starter at $29 and Growth at $99 cover everyday reporting needs",
+            "description": "Use Starter for lightweight reporting with core connectors and automated refreshes, or choose Growth at $99/month for more dashboards, users, and faster team-wide collaboration.",
+            "image": {
+                "src": "../assets/pricing-plans-overview.webp",
+                "alt": "Team reviewing pricing plans and reporting package options"
+            },
+            "links": [
+                {
+                    "text": "Compare $29 and $99 plans",
+                    "href": "/pricing#compare"
+                }
+            ]
+        },
+        {
+            "type": "feature",
+            "imagePosition": "right",
+            "heading": "Enterprise pricing is tailored for larger data operations",
+            "description": "When your business needs higher source limits, advanced permissions, premium onboarding, or dedicated support, Enterprise plans are scoped around your reporting requirements and rollout goals.",
+            "image": {
+                "src": "../assets/pricing-enterprise-support.webp",
+                "alt": "Business team discussing enterprise pricing and support options"
+            },
+            "links": [
+                {
+                    "text": "Request enterprise pricing",
+                    "href": "/contact"
+                },
+                {
+                    "text": "Compare all plans",
+                    "href": "/pricing#compare"
+                }
+            ]
+        },
+        {
+            "type": "action",
+            "heading": "Choose the right price point for your team",
+            "description": "Start at $29/month, upgrade to $99/month as collaboration expands, or contact us for a custom Enterprise quote built around your team size and reporting complexity.",
+            "ctas": [
+                {
+                    "text": "Start Free Trial",
+                    "href": "/signup",
+                    "variant": "fill",
+                    "tone": "green"
+                },
+                {
+                    "text": "Book a Demo",
+                    "href": "/demo",
+                    "variant": "outline",
+                    "tone": "purple"
+                },
+                {
+                    "text": "Contact Sales",
+                    "href": "/contact",
+                    "variant": "text",
+                    "tone": "green"
+                }
+            ]
+        }
+    ]
+}

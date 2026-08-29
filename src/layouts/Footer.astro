@@ -2,25 +2,22 @@
 import Container from "../components/atoms/Container/Container.astro";
 ---
 
-<footer class="site-footer">
-    <Container as="footer" class="site-footer-inner">
-        <p class="site-footer-title">Demo Marketing Website</p>
-    </Container>
-</footer>
+<Container as="footer" class="site-footer site-footer-inner">
+    <p class="site-footer-title">Demo Marketing Website</p>
+</Container>
 
 <style>
-    .site-footer {
-        border-top: 1px solid color-mix(in srgb, var(--color-caption) 20%, var(--color-surface));
-        background-color: var(--color-surface);
-    }
-
     .site-footer-inner {
         padding-block: 2rem;
+        padding: 20px;
     }
 
     .site-footer-title {
         font-family: var(--font-sora);
         font-weight: 600;
         color: var(--color-heading);
+        margin-bottom: 60px;
+        border-top: 1px solid;
+        padding: 10px;
     }
 </style>

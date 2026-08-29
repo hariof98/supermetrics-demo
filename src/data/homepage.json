@@ -1,12 +1,12 @@
 {
     "title": "Marketing Intelligence Platform",
-    "description": "Bring every marketing channel into one reliable reporting layer so teams can optimize performance with confidence.",
+    "description": "Centralize paid, organic, and CRM data into a single reporting layer so teams can measure impact, reduce manual work, and move faster.",
     "blocks": [
         {
             "type": "hero",
             "layout": "centered",
-            "heading": "Make Smarter Marketing Decisions with Unified Data",
-            "description": "Connect your paid, organic, and CRM data in one place to uncover insights faster, improve campaign performance, and prove impact across the funnel.",
+            "heading": "One source of truth for marketing performance",
+            "description": "Bring ad, analytics, and CRM signals into one trusted source so your team can stop reconciling spreadsheets and start optimizing campaigns with confidence.",
             "ctas": [
                 {
                     "text": "Start Free Trial",
@@ -25,11 +25,11 @@
         {
             "type": "feature",
             "imagePosition": "left",
-            "heading": "Make Smarter Marketing Decisions with Unified Data",
-            "description": "Connect your paid, organic, and CRM data in one place to uncover insights faster, improve campaign performance, and prove impact across the funnel.",
+            "heading": "Connect every channel in minutes",
+            "description": "Pre-built connectors for major ad platforms, analytics, and commerce tools—set up once and get automated refreshes so reports stay accurate without manual effort.",
             "image": {
-                "src": "../assets/hero.jpg",
-                "alt": "Dashboard showing campaign performance across channels"
+                "src": "../assets/homepage-dashboard-overview.webp",
+                "alt": "Dashboard showing campaign reporting across multiple marketing channels"
             },
             "links": [
                 {
@@ -39,13 +39,19 @@
             ]
         },
         {
+            "type": "testimonial",
+            "heading": "“We reduced reporting time from days to hours”",
+            "description": "Instead of stitching exports from five tools every week, our team now reviews one live dashboard and acts on insights the same day.",
+            "caption": "Hari, Chargebee"
+        },
+        {
             "type": "feature",
             "imagePosition": "right",
-            "heading": "Make Smarter Marketing Decisions with Unified Data",
-            "description": "Connect your paid, organic, and CRM data in one place to uncover insights faster, improve campaign performance, and prove impact across the funnel.",
+            "heading": "Collaborate on reports that move the business",
+            "description": "Share dashboards, control access, and schedule deliveries so stakeholders see the same metric definitions and act on insights together.",
             "image": {
-                "src": "../assets/hero.jpg",
-                "alt": "Dashboard showing campaign performance across channels"
+                "src": "../assets/homepage-feature-collaboration.webp",
+                "alt": "Marketing team collaborating on shared performance insights"
             },
             "links": [
                 {
@@ -60,8 +66,8 @@
         },
         {
             "type": "action",
-            "heading": "Turn marketing data into revenue — fast",
-            "description": "Deploy pre-built connectors, automated transformations, and real-time dashboards so your team spends less time wrangling data and more time scaling campaigns.",
+            "heading": "Get started quickly — free trial or tailored demo",
+            "description": "Choose a free trial to explore core reporting, or book a demo with our team to see how the platform maps to your workflows and KPIs.",
             "ctas": [
                 {
                     "text": "Try 2‑Minute Setup",
@@ -82,12 +88,6 @@
                     "tone": "green"
                 }
             ]
-        },
-        {
-            "type": "testimonial",
-            "heading": "Turn marketing data into revenue — fast",
-            "description": "Deploy pre-built connectors, automated transformations, and real-time dashboards so your team spends less time wrangling data and more time scaling campaigns.",
-            "caption": "Hari, Chargebee"
         }
     ]
 }

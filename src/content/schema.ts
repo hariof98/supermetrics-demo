@@ -70,5 +70,5 @@ export const createPageSchema = ({ image }: Pick<SchemaContext, "image">) => {
     });
 };
 
-export type Page = ReturnType<typeof createPageSchema>["_output"];
+export type Page = z.infer<ReturnType<typeof createPageSchema>>;
 export type Block = Page["blocks"][number];

@@ -13,7 +13,9 @@ export interface Props {
     class?: string;
 }
 
-const { src, alt, width = 50, height = 50, loading = "lazy", class: className } = Astro.props as Props;
+const { src, alt, width, height, loading = "lazy", class: className } = Astro.props as Props;
+const resolvedWidth = width ?? src.width;
+const resolvedHeight = height ?? src.height;
 ---
 
-<Image src={src} alt={alt} width={width} height={height} loading={loading} format={DEFAULT_IMAGE_FORMAT} class={className} />
+<Image src={src} alt={alt} width={resolvedWidth} height={resolvedHeight} loading={loading} format={DEFAULT_IMAGE_FORMAT} class={className} />

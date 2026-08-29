@@ -1,0 +1,52 @@
+{
+    "title": "Product Overview",
+    "description": "Explore a marketing reporting platform built to centralize data, standardize metrics, and accelerate decision-making across teams.",
+    "blocks": [
+        {
+            "type": "hero",
+            "layout": "split",
+            "heading": "See every signal behind your growth in one product",
+            "description": "Unify ad platforms, web analytics, ecommerce, and CRM performance into a single reporting workflow your team can trust every day.",
+            "image": {
+                "src": "../assets/product-insights-overview.webp",
+                "alt": "Reporting workspace with live dashboards and automated refresh status"
+            },
+            "ctas": [
+                {
+                    "text": "Explore the Platform",
+                    "href": "/demo",
+                    "variant": "fill",
+                    "tone": "green"
+                },
+                {
+                    "text": "View Pricing",
+                    "href": "/pricing",
+                    "variant": "outline",
+                    "tone": "purple"
+                }
+            ]
+        },
+        {
+            "type": "testimonial",
+            "heading": "We replaced fragmented reporting with a workflow the whole team actually uses",
+            "description": "Instead of reconciling dashboards from five tools every week, we now review one live view and act on insights immediately.",
+            "caption": "Director of Growth, Northstar Commerce"
+        },
+        {
+            "type": "feature",
+            "imagePosition": "left",
+            "heading": "Build reports once and keep them always up to date",
+            "description": "Automate recurring reporting with scheduled refreshes, shared dashboards, and reusable templates that reduce manual exports and spreadsheet churn.",
+            "image": {
+                "src": "../assets/product-insights-overview.webp",
+                "alt": "Reporting workspace with live dashboards and automated refresh status"
+            },
+            "links": [
+                {
+                    "text": "See reporting workflows",
+                    "href": "/product/reporting"
+                }
+            ]
+        }
+    ]
+}
