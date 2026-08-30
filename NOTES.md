@@ -88,6 +88,8 @@ required files it revalidates its own work against the given context to fix any 
 With more time I would have focused on:
 
 - Closing the freshness gap described above: webhook-triggered rebuilds, incremental builds, and on-demand rendering for draft content.
+- Tests: The standard here is enforced by Zod at the content boundary, TypeScript in the build, and lint on commit, which covers the failure modes
+  that actually occur in this codebase. With more time, setting up testing will be a priority.
 - More blocks that can be used to create the other page types common on a marketing website: a carousel for multiple testimonials, accordions for
   FAQs, an optimised way to handle forms.
 - A better colour palette and an overall better visual system in place.
