@@ -3,7 +3,7 @@ export type Variant = "fill" | "outline" | "text";
 export type Tone = "default" | "green" | "purple";
 
 export interface Props {
-    href?: string;
+    href: string;
     variant?: Variant;
     tone?: Tone;
     external?: boolean;
@@ -11,7 +11,7 @@ export interface Props {
     class?: string;
 }
 
-const { href = "/", variant = "fill", tone = "default", external = false, label, class: className } = Astro.props;
+const { href, variant = "fill", tone = "default", external = false, label, class: className } = Astro.props;
 ---
 
 <a

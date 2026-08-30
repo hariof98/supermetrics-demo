@@ -11,10 +11,10 @@ export default [
     {
         files: ["**/*.astro"],
         rules: {
-            "@typescript-eslint/no-unused-vars": "off",
+            "@typescript-eslint/no-unused-vars": ["error", { varsIgnorePattern: "^Props$" }],
         },
     },
     {
-        ignores: ["dist/", ".astro/", "node_modules/"],
+        ignores: ["dist/", ".astro", "node_modules/"],
     },
 ];

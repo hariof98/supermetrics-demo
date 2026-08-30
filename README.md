@@ -1,43 +1,97 @@
-# Astro Starter Kit: Minimal
+# Demo Marketing Website
 
-```sh
-npm create astro@latest -- --template minimal
+A content-driven marketing site built with Astro. Pages are composed from reusable blocks of atoms and authored as JSON, so adding a page needs no
+code changes.
+
+## General Details
+
+- **Project**: Demo Marketing Website
+- **Date**: 30/08/2026
+- **Author**: Hari Sridharan
+
+## Stack
+
+- **Frameworks & Libraries**: Astro, TypeScript, Node 22
+- **Architecture**: Atomic-first composition
+- **Data Layer**: Local JSON, validated with Zod via Astro content collections
+- **Styling**: Tailwind 4 with design tokens, Inter and Sora self-hosted
+- **Tooling**: ESLint, Prettier, husky + lint-staged running on commit
+
+## Getting started
+
+Requires Node 22
+
+```bash
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## Project structure
 
 ```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+src/
+├── assets/        Images, imported so Astro can optimise them
+├── components/
+│   ├── atoms/     Text, Button, Link, Image, Container
+│   └── blocks/    Hero, Feature, Action, Testimonial + registry.ts
+├── content/
+│   └── schema.ts  Zod schemas for pages and blocks
+├── data/          Page content as JSON, one file per page
+├── layouts/       BaseLayout, Header, Footer
+├── pages/
+│   └── [...slug].astro   One route for every page
+└── styles/
+    └── global.css        Design tokens and shared classes
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Adding a page
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Create a JSON file in `src/data/`. The filename becomes the route, so `about.json` renders at `/about`.
 
-Any static assets, like images, can be placed in the `public/` directory.
+```json
+{
+    "title": "About",
+    "description": "Meta description for search results.",
+    "blocks": [
+        {
+            "type": "hero",
+            "layout": "centered",
+            "heading": "About us",
+            "description": "Supporting copy."
+        }
+    ]
+}
+```
 
-## 🧞 Commands
+No code changes needed. Content is validated at build against the schema in `src/content/schema.ts`, so a missing or malformed field fails the build
+with the file and field named.
 
-All commands are run from the root of the project, from a terminal:
+## Adding a block
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+```bash
+npm run new:block <name>
+```
 
-## 👀 Want to learn more?
+This generates the component and prints the two lines to add to `registry.ts` and `schema.ts`.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Conventions
+
+- Blocks compose from atoms. No raw `h1`, `p`, `a` or `img` in a block.
+- Visual values come from tokens in `global.css`. No hardcoded colours or sizes.
+- Props for system decisions (`variant`, `tone`), `class` for layout one-offs.
+- Shared classes go in `global.css`. Styles used by one component go in a scoped `<style>` block in that component.
+- Images live in `src/assets/` and are imported so Astro can optimise them. `public/` is only for files needing a stable URL.
+
+## Scripts
+
+| Command                    | Does                              |
+| -------------------------- | --------------------------------- |
+| `npm run dev`              | Start the dev server              |
+| `npm run build`            | Type-check, then build to `dist/` |
+| `npm run preview`          | Serve the built output            |
+| `npm run check`            | Type-check only                   |
+| `npm run lint`             | Lint                              |
+| `npm run format`           | Prettier Code Format              |
+| `npm run new:block <name>` | Scaffold a new block              |
+
+Lint and format also run automatically on commit.
