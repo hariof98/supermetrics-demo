@@ -107,7 +107,7 @@ So I switched to OpenAI models, which worked properly. GPT-5 Nano was poor at un
 for the lower-level work instead. GPT-5.4 became my main model of choice, since it produced much better agentic results without consuming a lot of
 tokens or needing re-prompting.
 
-Total spend was $16 of the $50 provided.
+Total spend currently stands around $17 of the $50 provided.
 
 I also used this to test AGENTS.md itself. Once it was written, I asked an agent to create a new block without pointing it to the file or giving any
 other context. It found the file, ran the scaffold script, and built the block from the existing atoms. That was my check that the context file
