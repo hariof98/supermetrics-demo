@@ -83,6 +83,8 @@ An atom must:
 - Accept `class` for layout one-offs
 - Expose style choices as named variants, not as individual style props
 - Have no defaults for values whose absence should fail loudly
+- Name the element-type prop `tag`, never `as`. A prop named `as` silently disables prop type checking for the entire component unless it uses
+  `Polymorphic<{ as: Tag }>` from `astro/types`
 
 Shared classes for the atom go in `@layer components` in `global.css`. Only layout specific to that one atom goes in a scoped `<style>` block.
 

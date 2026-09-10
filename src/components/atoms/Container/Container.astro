@@ -1,12 +1,12 @@
 ---
-type As = "div" | "section" | "header" | "footer" | "main";
+type Tag = "div" | "section" | "header" | "footer" | "main";
 
 interface Props {
-    as?: As;
+    tag?: Tag;
     class?: string;
 }
 
-const { as: Element = "div", class: className } = Astro.props;
+const { tag: Element = "div", class: className } = Astro.props;
 ---
 
 <Element class:list={["container", className]}>

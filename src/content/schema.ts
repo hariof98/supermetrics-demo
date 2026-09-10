@@ -57,6 +57,7 @@ export const createPageSchema = ({ image }: Pick<SchemaContext, "image">) => {
         type: z.literal("testimonial"),
         heading: z.string().min(1),
         description: z.string(),
+        links: z.array(link).optional(),
         caption: z.string(),
     });
     /* blocks */

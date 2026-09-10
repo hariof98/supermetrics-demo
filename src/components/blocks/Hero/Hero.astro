@@ -17,7 +17,7 @@ type HeroImage = Pick<ImageProps, "src" | "alt">;
 interface Props {
     layout?: Layout;
     heading: string;
-    description?: string;
+    description: string;
     ctas?: Cta[];
     image?: HeroImage;
 }
@@ -33,7 +33,7 @@ const resolvedLayout = layout === "split" && !image ? "centered" : layout;
     <Container>
         <div class:list={["hero-inner", `hero-${resolvedLayout}`]}>
             <div class="hero-content">
-                <Text as="h1" variant="display">{heading}</Text>
+                <Text tag="h1" variant="display">{heading}</Text>
 
                 {
                     description && (

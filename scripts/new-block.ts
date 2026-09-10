@@ -49,7 +49,7 @@ const { heading, description } = Astro.props;
 <section class="${blockType}">
     <Container>
         <div class="${blockType}-content">
-            <Text as="h2" variant="heading">{heading}</Text>
+            <Text tag="h2" variant="heading">{heading}</Text>
 
             <Text variant="body">{description}</Text>
         </div>
