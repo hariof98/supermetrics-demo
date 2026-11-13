@@ -1,7 +1,6 @@
 # Demo Website
 
-A content-driven marketing site built with Astro. Pages are composed from reusable blocks of atoms and authored as JSON, so adding a page needs no
-code changes.
+A content-driven site built with Astro, where pages are composed of reusable blocks built from atoms and defined through JSON, allowing new pages to be added without code changes.
 
 ## General Details
 
