@@ -1,6 +1,6 @@
 # Demo Website
 
-A content-driven site built with Astro, where pages are composed of reusable blocks built from atoms and defined through JSON, allowing new pages to be added without code changes.
+A content-driven site built with Astro, where pages are composed of reusable blocks built from atoms and defined through JSON, allowing new pages to be added without code changes. Designed to be accessible to both human users and AI agents.
 
 ## General Details
 
