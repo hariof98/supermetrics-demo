@@ -1,11 +1,11 @@
-# Demo Marketing Website
+# Demo Website
 
 A content-driven marketing site built with Astro. Pages are composed from reusable blocks of atoms and authored as JSON, so adding a page needs no
 code changes.
 
 ## General Details
 
-- **Project**: Demo Marketing Website
+- **Project**: Demo Website
 - **Date**: 30/08/2026
 - **Author**: Hari Sridharan
 
